@@ -53,6 +53,48 @@
             -o-filter: blur(150px);
             filter: blur(150px);
         }
+
+        /* Modal Styling */
+        .modal {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            z-index: 1000;
+        }
+
+        .modal-content {
+            text-align: center;
+            background: linear-gradient(90deg, rgba(27, 18, 29, 1) 0%, rgba(18, 15, 47, 1) 50%, rgba(27, 18, 29, 1) 100%);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .modal-content h1 {
+            margin-bottom: 20px;
+            font-size: 24px;
+        }
+
+        .modal-content button {
+            padding: 10px 20px;
+            font-size: 18px;
+            color: white;
+            background-color: #28a745;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .modal-content button:hover {
+            background-color: #218838;
+        }
     </style>
 </head>
 
@@ -119,17 +161,29 @@
                     <h3 class="fn__maintitle big" data-text="$MELON | Meme Elon" data-align="center"
                         style="margin-bottom: 20px;">$MELON | Meme Elon
                     </h3>
-                    <h3 class="fn__maintitle" data-align="center"><a href="#" class="link" target="_blank"
-                            title="Dexscreener"><img src="https://itsafwog.com/assets/threreallandwolf.svg"
-                                alt="dexscreener"
+                    <h3 class="fn__maintitle" data-align="center"><a
+                            href="https://dexscreener.com/solana/9wbfswwtyd2vv9c64lyvby1f67uepntjx48fw2ovmoon"
+                            class="link" target="_blank" title="Dexscreener"><img
+                                src="https://itsafwog.com/assets/threreallandwolf.svg" alt="dexscreener"
                                 style="background-color: white; width: 40px; height: 40px; padding: 6px;border-radius: 100%;margin-right: 5px;"></a>
-                        <a href="#" class="link" target="_blank" title="x (Twitter)"><img
-                                src="https://itsafwog.com/assets/x.svg" alt="x"
+                        <a href="https://x.com/Melonkingofmeme?t=x7LO0SZxww9CXIc-h5B6zA&s=09" class="link"
+                            target="_blank" title="x (Twitter)"><img src="https://itsafwog.com/assets/x.svg" alt="x"
                                 style="background-color: white; width: 40px; padding: 6px; border-radius: 100%;margin-right: 5px;"></a>
                         <a href="https://t.me/memeelon_coin" class="link" target="_blank" title="Telegram"><img
                                 src="https://itsafwog.com/assets/telegram.svg" alt="telegram"
                                 style="background-color: white; width: 40px; padding: 6px; border-radius: 100%;margin-right: 5px;"></a>
                     </h3>
+                    <h4 class="fn__maintitle" data-align="center" style="margin-top: 20px;cursor: pointer;"
+                        onclick="copyText()">
+                        <p style="font-size: 1.2rem;">CA: <b
+                                id="textToCopy">9wBFswWTyD2vV9c64LYVBY1f67uepntJX48Fw2ovmoon &nbsp;</b>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor"
+                                class="bi bi-copy" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd"
+                                    d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1zM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1z" />
+                            </svg>
+                        </p>
+                    </h4>
                     <!-- Slider -->
                     <div class="fn_cs_slider" data-responsive="on">
                         <div class="slider_top">
@@ -222,9 +276,8 @@
                         <p>Elon Mask ($MELON) / Meme Elon, represents the origin of the creation of memecoin, the figure
                             of Elon Musk is considered to be the figure behind the creation of memecoin on various
                             networks starting with Elon's first token, DOGECOIN.</p>
-                        <a href="#" class="metaportal_fn_button" target="_blank"><span>Buy Now</span></a><br>
-
-
+                        <a href="https://dexscreener.com/solana/9wbfswwtyd2vv9c64lyvby1f67uepntjx48fw2ovmoon"
+                            class="metaportal_fn_button" target="_blank"><span>Buy Now</span></a><br>
 
                     </div>
                     <!-- !Description -->
@@ -245,8 +298,12 @@
                         </div>
                         <div class="right_part">
                             <ul>
-                                <li><a class="creative_link" target="_blank" href="#">Dexscreener</a></li>
-                                <li><a class="creative_link" target="_blank" href="#">X (Twitter)</a></li>
+                                <li><a class="creative_link" target="_blank"
+                                        href="https://dexscreener.com/solana/9wbfswwtyd2vv9c64lyvby1f67uepntjx48fw2ovmoon">Dexscreener</a>
+                                </li>
+                                <li><a class="creative_link" target="_blank"
+                                        href="https://x.com/Melonkingofmeme?t=x7LO0SZxww9CXIc-h5B6zA&s=09">X
+                                        (Twitter)</a></li>
                                 <li><a class="creative_link" target="_blank"
                                         href="https://t.me/memeelon_coin">Telegram</a>
                                 </li>
@@ -265,15 +322,26 @@
 
 
         <!-- Totop -->
-        <a href="#" class="metaportal_fn_totop">
+        <a href="#" class="metaportal_fn_totop" id="playPauseButton">
             <span class="totop_inner">
                 <span class="icon">
                     <img src="https://srbthemes.kcubeinfotech.com/metaportal/flask/svg/down.svg" alt="" class="fn__svg">
                 </span>
-                <span class="text">Scroll To Top</span>
+                <span class="text">Play/Pause</span>
             </span>
         </a>
         <!-- /Totop -->
+        <!-- Modal -->
+        <div class="modal" id="welcomeModal">
+            <div class="modal-content">
+                <h1>Welcome to $melon</h1>
+                <a href="#" class="metaportal_fn_button" id="startButton" style="margin: auto;"><span>F*ck
+                        off!</span></a><br>
+
+            </div>
+        </div>
+
+        <audio id="backgroundMusic" src="music.mp3" preload="auto"></audio>
 
 
     </div>
@@ -288,6 +356,55 @@
     <script type="text/javascript"
         src="https://srbthemes.kcubeinfotech.com/metaportal/flask/js/init.js?ver=10.0"></script>
     <!-- !Scripts -->
+    <script>
+        function copyText() {
+            // Ambil elemen teks
+            var textToCopy = document.getElementById("textToCopy").innerText;
+
+            // Salin teks ke clipboard
+            navigator.clipboard.writeText(textToCopy).then(function () {
+                alert("Teks berhasil disalin: " + textToCopy);
+            }).catch(function (error) {
+                alert("Gagal menyalin teks: " + error);
+            });
+        }
+
+        // Ambil elemen modal, tombol, dan musik
+        const modal = document.getElementById("welcomeModal");
+        const startButton = document.getElementById("startButton");
+        const music = document.getElementById("backgroundMusic");
+        const playPauseButton = document.getElementById("playPauseButton");
+        const buttonText = playPauseButton.querySelector(".text");
+
+        // Fungsi untuk memulai musik dan menghilangkan modal
+        function startMusic() {
+            music.play().then(() => {
+                modal.style.display = "none"; // Sembunyikan modal
+            }).catch(error => {
+                console.error("Gagal memutar musik: ", error);
+            });
+        }
+        function togglePlayPause() {
+            if (music.paused) {
+                music.play().then(() => {
+                    buttonText.textContent = "Pause";
+                }).catch(error => {
+                    console.log("Error saat mencoba memutar musik: ", error);
+                });
+            } else {
+                music.pause();
+                buttonText.textContent = "Play";
+            }
+        }
+
+        // Event listener untuk tombol
+        playPauseButton.addEventListener("click", function (event) {
+            event.preventDefault(); // Mencegah redirect link
+            togglePlayPause();
+        });
+        startButton.addEventListener("click", startMusic);
+        startButton.addEventListener("click", buttonText.textContent = "Pause");
+    </script>
 
 </body>
 
